@@ -1,0 +1,878 @@
+DEBUG:cargo::core::workspace: find_root - trying /home/eispin/workspace/Cargo.toml
+DEBUG:cargo::core::workspace: find_root - trying /home/eispin/Cargo.toml
+DEBUG:cargo::core::workspace: find_root - trying /home/Cargo.toml
+DEBUG:cargo::core::workspace: find_root - trying /Cargo.toml
+DEBUG:cargo::core::workspace: find_members - only me as a member
+DEBUG:cargo::ops::cargo_compile: Begin compile_ws
+DEBUG:cargo::core::registry: load/missing  file:///home/eispin/workspace/namespacing
+DEBUG:cargo::sources::config: loading: file:///home/eispin/workspace/namespacing
+DEBUG:cargo::core::resolver: initial activation: foo v0.0.1 (file:///home/eispin/workspace/namespacing)
+DEBUG:cargo::core::registry: load/locked   file:///home/eispin/workspace/namespacing
+DEBUG:cargo::core::resolver: initial activation: foo v0.0.1 (file:///home/eispin/workspace/namespacing)
+DEBUG:cargo::ops::cargo_compile: Will ignore this generate_targets invocation
+DEBUG:cargo::ops::cargo_compile: Considering targets: [BuildProposal { target: Target { kind: Lib([Lib]), name: "foo", src_path: "/home/eispin/workspace/namespacing/src/lib.rs", required_features: None, tested: true, benched: true, doc: true, doctest: true, harness: true, for_host: false }, profile: Profile { opt_level: "0", lto: false, codegen_units: None, rustc_args: None, rustdoc_args: None, debuginfo: Some(2), debug_assertions: true, rpath: false, test: true, doc: true, run_custom_build: false, check: false, panic: None }, required: false }]
+DEBUG:cargo::ops::cargo_compile: End of the ignored generate_targets invocation
+DEBUG:cargo::ops::cargo_compile: Real generate_targets invocation
+DEBUG:cargo::ops::cargo_compile: Considering targets: [BuildProposal { target: Target { kind: Lib([Lib]), name: "foo", src_path: "/home/eispin/workspace/namespacing/src/lib.rs", required_features: None, tested: true, benched: true, doc: true, doctest: true, harness: true, for_host: false }, profile: Profile { opt_level: "0", lto: false, codegen_units: None, rustc_args: None, rustdoc_args: None, debuginfo: Some(2), debug_assertions: true, rpath: false, test: true, doc: true, run_custom_build: false, check: false, panic: None }, required: false }]
+DEBUG:cargo::ops::cargo_compile: End of real generate_targets invocation
+DEBUG:cargo::ops::cargo_rustc::context: probe_target_info: crate_types={"bin", "rlib"}
+DEBUG:cargo::ops::cargo_rustc::fingerprint: fingerprint at: /home/eispin/workspace/namespacing/target/debug/.fingerprint/foo-8fc72f475fb3cb52/lib-foo-8fc72f475fb3cb52
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib", Some("/home/eispin/workspace/namespacing/target/debug/libfoo.rlib"), true)]
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib", Some("/home/eispin/workspace/namespacing/target/debug/libfoo.rlib"), true)]
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib", Some("/home/eispin/workspace/namespacing/target/debug/libfoo.rlib"), true)]
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib", Some("/home/eispin/workspace/namespacing/target/debug/libfoo.rlib"), true)]
+INFO:cargo::ops::cargo_rustc::job_queue: start: foo v0.0.1 (file:///home/eispin/workspace/namespacing) => Target(lib)/Profile(build) => Host
+DEBUG:cargo::ops::cargo_rustc: linking /home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib to /home/eispin/workspace/namespacing/target/debug/libfoo.rlib
+INFO:cargo::ops::cargo_rustc::job_queue: end: foo v0.0.1 (file:///home/eispin/workspace/namespacing) => Target(lib)/Profile(build) => Host
+INFO:cargo::ops::cargo_rustc::job_queue: start: foo v0.0.1 (file:///home/eispin/workspace/namespacing) => Target(lib)/Profile(test) => Host
+INFO:cargo::ops::cargo_rustc::job_queue: end: foo v0.0.1 (file:///home/eispin/workspace/namespacing) => Target(lib)/Profile(test) => Host
+    Finished dev [unoptimized + debuginfo] target(s) in 0.0 secs
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/doc/foo-9e97ff14405c0481", None, false)]
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib", Some("/home/eispin/workspace/namespacing/target/debug/libfoo.rlib"), true)]
+DEBUG:cargo::ops::cargo_rustc::output_depinfo: can't find dep_info for PackageId { name: "foo", version: "0.0.1", source: "file:///home/eispin/workspace/namespacing" } Profile { opt_level: "0", lto: false, codegen_units: None, rustc_args: None, rustdoc_args: None, debuginfo: Some(2), debug_assertions: true, rpath: false, test: true, doc: true, run_custom_build: false, check: false, panic: None }
+INFO:cargo::ops::cargo_rustc::context: Target filenames: [("/home/eispin/workspace/namespacing/target/doc/foo-9e97ff14405c0481", None, false)]
+DEBUG:cargo::ops::cargo_compile: Normal end of compile_ws
+   Doc-tests foo
+INFO:rustc_metadata::creader: resolving crate `extern crate std as std`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: reading "libstd-9a66b6a343d52844.rlib" => Duration { secs: 0, nanos: 353132 }
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 32267 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::creader: register crate `extern crate std as std`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: reading "libcore-cd0ca85e71f914ca.rlib" => Duration { secs: 0, nanos: 38246 }
+INFO:rustc_metadata::creader: register crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: reading "libcollections-a2a467c3ca3b6479.rlib" => Duration { secs: 0, nanos: 51872 }
+INFO:rustc_metadata::creader: register crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 74883 }
+INFO:rustc_metadata::creader: register crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: reading "liballoc_system-5636d8d1255715e9.rlib" => Duration { secs: 0, nanos: 43848 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 146457 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: reading "liballoc-ce7b9706e1719f27.rlib" => Duration { secs: 0, nanos: 19537 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: reading "librand-6bc49e032a89c77d.rlib" => Duration { secs: 0, nanos: 54531 }
+INFO:rustc_metadata::creader: register crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: reading "liblibc-95af4192ed69a1c8.rlib" => Duration { secs: 0, nanos: 21832 }
+INFO:rustc_metadata::creader: register crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: reading "libunwind-2beb731af7a6faec.rlib" => Duration { secs: 0, nanos: 35994 }
+INFO:rustc_metadata::creader: register crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: reading "libcompiler_builtins-0bf24067248742a8.rlib" => Duration { secs: 0, nanos: 70915 }
+INFO:rustc_metadata::creader: register crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 136982 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: reading "libpanic_unwind-9d79f761aa668a33.rlib" => Duration { secs: 0, nanos: 14204 }
+INFO:rustc_metadata::creader: register crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: alloc_jemalloc required by rlib and is an allocator
+INFO:rustc_metadata::creader: injecting a dep from 5 to 10
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_system as alloc_system`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: reading "liballoc_system-5636d8d1255715e9.rlib" => Duration { secs: 0, nanos: 50504 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc_system as alloc_system`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: injecting a dep from 5 to 12
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: panic runtime not found -- loading panic_unwind
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: resolved crates:
+INFO:rustc_metadata::creader:   name: panic_unwind
+INFO:rustc_metadata::creader:   cnum: 11
+INFO:rustc_metadata::creader:   hash: a65bb06f715477e1
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::creader:   name: unwind
+INFO:rustc_metadata::creader:   cnum: 8
+INFO:rustc_metadata::creader:   hash: 532ad27b58d6adb8
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::creader:   name: alloc
+INFO:rustc_metadata::creader:   cnum: 5
+INFO:rustc_metadata::creader:   hash: 3a892de708b1693e
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::creader:   name: core
+INFO:rustc_metadata::creader:   cnum: 2
+INFO:rustc_metadata::creader:   hash: 637fdf7b43bd3b10
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::creader:   name: alloc_jemalloc
+INFO:rustc_metadata::creader:   cnum: 10
+INFO:rustc_metadata::creader:   hash: 30d510c4c10a9512
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::creader:   name: libc
+INFO:rustc_metadata::creader:   cnum: 7
+INFO:rustc_metadata::creader:   hash: 3ba0ee72bfbb113a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::creader:   name: std_unicode
+INFO:rustc_metadata::creader:   cnum: 4
+INFO:rustc_metadata::creader:   hash: 989ed0b21ab064f9
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::creader:   name: std
+INFO:rustc_metadata::creader:   cnum: 1
+INFO:rustc_metadata::creader:   hash: b001f1b853496075
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:   dylib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::creader:   name: alloc_system
+INFO:rustc_metadata::creader:   cnum: 12
+INFO:rustc_metadata::creader:   hash: 4dcd7e0125244df8
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::creader:   name: compiler_builtins
+INFO:rustc_metadata::creader:   cnum: 9
+INFO:rustc_metadata::creader:   hash: f68cc2bdbdfd7776
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::creader:   name: rand
+INFO:rustc_metadata::creader:   cnum: 6
+INFO:rustc_metadata::creader:   hash: 7073c427bb91bcdb
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::creader:   name: collections
+INFO:rustc_metadata::creader:   cnum: 3
+INFO:rustc_metadata::creader:   hash: 46be044293f01c2a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+
+running 1 test
+INFO:rustdoc::test: final test program: extern crate foo;
+fn main() {
+foo::bar();
+println!("ok");
+}
+INFO:rustc_metadata::creader: resolving crate `extern crate std as std`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: reading "libstd-9a66b6a343d52844.rlib" => Duration { secs: 0, nanos: 63984 }
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 20635 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::creader: register crate `extern crate std as std`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: reading "libcore-cd0ca85e71f914ca.rlib" => Duration { secs: 0, nanos: 26713 }
+INFO:rustc_metadata::creader: register crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: reading "libcollections-a2a467c3ca3b6479.rlib" => Duration { secs: 0, nanos: 73257 }
+INFO:rustc_metadata::creader: register crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 26093 }
+INFO:rustc_metadata::creader: register crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: reading "liballoc_system-5636d8d1255715e9.rlib" => Duration { secs: 0, nanos: 23846 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 147704 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: reading "liballoc-ce7b9706e1719f27.rlib" => Duration { secs: 0, nanos: 18109 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: reading "librand-6bc49e032a89c77d.rlib" => Duration { secs: 0, nanos: 41999 }
+INFO:rustc_metadata::creader: register crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: reading "liblibc-95af4192ed69a1c8.rlib" => Duration { secs: 0, nanos: 17929 }
+INFO:rustc_metadata::creader: register crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: reading "libunwind-2beb731af7a6faec.rlib" => Duration { secs: 0, nanos: 31471 }
+INFO:rustc_metadata::creader: register crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: reading "libcompiler_builtins-0bf24067248742a8.rlib" => Duration { secs: 0, nanos: 67960 }
+INFO:rustc_metadata::creader: register crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 176518 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: reading "libpanic_unwind-9d79f761aa668a33.rlib" => Duration { secs: 0, nanos: 15193 }
+INFO:rustc_metadata::creader: register crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate foo as foo`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib
+INFO:rustc_metadata::locator: reading "libfoo-8fc72f475fb3cb52.rlib" => Duration { secs: 0, nanos: 69783 }
+INFO:rustc_metadata::creader: register crate `extern crate foo as foo`
+INFO:rustc_metadata::creader: resolving crate `extern crate std as std`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: alloc_jemalloc required by rlib and is an allocator
+INFO:rustc_metadata::creader: injecting a dep from 5 to 10
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: injecting a dep from 5 to 10
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: panic runtime not found -- loading panic_unwind
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: resolved crates:
+INFO:rustc_metadata::creader:   name: panic_unwind
+INFO:rustc_metadata::creader:   cnum: 11
+INFO:rustc_metadata::creader:   hash: a65bb06f715477e1
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::creader:   name: unwind
+INFO:rustc_metadata::creader:   cnum: 8
+INFO:rustc_metadata::creader:   hash: 532ad27b58d6adb8
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::creader:   name: alloc
+INFO:rustc_metadata::creader:   cnum: 5
+INFO:rustc_metadata::creader:   hash: 3a892de708b1693e
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::creader:   name: core
+INFO:rustc_metadata::creader:   cnum: 2
+INFO:rustc_metadata::creader:   hash: 637fdf7b43bd3b10
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::creader:   name: alloc_jemalloc
+INFO:rustc_metadata::creader:   cnum: 10
+INFO:rustc_metadata::creader:   hash: 30d510c4c10a9512
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::creader:   name: libc
+INFO:rustc_metadata::creader:   cnum: 7
+INFO:rustc_metadata::creader:   hash: 3ba0ee72bfbb113a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::creader:   name: std_unicode
+INFO:rustc_metadata::creader:   cnum: 4
+INFO:rustc_metadata::creader:   hash: 989ed0b21ab064f9
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::creader:   name: std
+INFO:rustc_metadata::creader:   cnum: 1
+INFO:rustc_metadata::creader:   hash: b001f1b853496075
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:   dylib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::creader:   name: foo
+INFO:rustc_metadata::creader:   cnum: 12
+INFO:rustc_metadata::creader:   hash: 29c2c998aa4db500
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib
+INFO:rustc_metadata::creader:   name: compiler_builtins
+INFO:rustc_metadata::creader:   cnum: 9
+INFO:rustc_metadata::creader:   hash: f68cc2bdbdfd7776
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::creader:   name: rand
+INFO:rustc_metadata::creader:   cnum: 6
+INFO:rustc_metadata::creader:   hash: 7073c427bb91bcdb
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::creader:   name: collections
+INFO:rustc_metadata::creader:   cnum: 3
+INFO:rustc_metadata::creader:   hash: 46be044293f01c2a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc::middle::region: temporary_scope2(NodeId(37)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(37)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(9)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(9)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(8)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(8)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(11)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(11)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(10)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(10)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(31)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(31)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(12)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(12)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(25)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(25)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(24)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(24)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(30)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(30)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(29)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(29)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(26)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(26)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(28)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(28)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(23)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(23)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(22)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(22)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(21)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(21)) - was_shrunk=false
+INFO:rustc::middle::dependency_format: adding dylib: std
+INFO:rustc::middle::dependency_format: adding RequireStatic: core
+INFO:rustc::middle::dependency_format: adding RequireStatic: collections
+INFO:rustc::middle::dependency_format: adding RequireStatic: std_unicode
+INFO:rustc::middle::dependency_format: adding RequireStatic: alloc
+INFO:rustc::middle::dependency_format: adding RequireStatic: rand
+INFO:rustc::middle::dependency_format: adding RequireStatic: libc
+INFO:rustc::middle::dependency_format: adding RequireStatic: unwind
+INFO:rustc::middle::dependency_format: adding RequireStatic: compiler_builtins
+INFO:rustc::middle::dependency_format: adding RequireStatic: alloc_jemalloc
+INFO:rustc::middle::dependency_format: adding RequireStatic: panic_unwind
+INFO:rustc::middle::dependency_format: adding staticlib: foo
+INFO:rustc_trans::back::link: LinkMeta { crate_name: rust_out(90), crate_hash: Svh { hash: 4850778919732057270 } }
+INFO:rustc_trans::base: trans_instance(std::fmt::Arguments::new_v1)
+INFO:rustc_trans::base: trans_instance(main)
+INFO:rustc_trans::back::link: preparing CrateTypeExecutable from ["/tmp/rustdoctest.hEO5tfExjQC6/rust_out.0.o"] to "/tmp/rustdoctest.hEO5tfExjQC6/rust_out"
+INFO:rustc_metadata::cstore: topological ordering: [CrateNum(2), CrateNum(7), CrateNum(10), CrateNum(5), CrateNum(8), CrateNum(11), CrateNum(4), CrateNum(3), CrateNum(6), CrateNum(9), CrateNum(1), CrateNum(12)]
+INFO:rustc_metadata::cstore: topological ordering: [CrateNum(2), CrateNum(7), CrateNum(10), CrateNum(5), CrateNum(8), CrateNum(11), CrateNum(4), CrateNum(3), CrateNum(6), CrateNum(9), CrateNum(1), CrateNum(12)]
+INFO:rustc_trans::back::link: "cc" "-Wl,--as-needed" "-Wl,-z,noexecstack" "-m64" "-L" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "/tmp/rustdoctest.hEO5tfExjQC6/rust_out.0.o" "-o" "/tmp/rustdoctest.hEO5tfExjQC6/rust_out" "-Wl,--gc-sections" "-pie" "-nodefaultlibs" "-L" "/home/eispin/workspace/namespacing/target/debug/deps" "-L" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-Wl,-Bstatic" "-Wl,-Bdynamic" "/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib" "-L" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-l" "std-9a66b6a343d52844" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib" "-l" "dl" "-l" "rt" "-l" "pthread" "-l" "gcc_s" "-l" "pthread" "-l" "c" "-l" "m" "-l" "rt" "-l" "util"
+INFO:rustc_trans::back::link: linker stderr:
+
+INFO:rustc_trans::back::link: linker stdout:
+
+test src/lib.rs - bar (line 6) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured
+
+   Doc-tests foo
+INFO:rustc_metadata::creader: resolving crate `extern crate std as std`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: reading "libstd-9a66b6a343d52844.rlib" => Duration { secs: 0, nanos: 367189 }
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 39307 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::creader: register crate `extern crate std as std`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: reading "libcore-cd0ca85e71f914ca.rlib" => Duration { secs: 0, nanos: 36846 }
+INFO:rustc_metadata::creader: register crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: reading "libcollections-a2a467c3ca3b6479.rlib" => Duration { secs: 0, nanos: 59746 }
+INFO:rustc_metadata::creader: register crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 28877 }
+INFO:rustc_metadata::creader: register crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: reading "liballoc_system-5636d8d1255715e9.rlib" => Duration { secs: 0, nanos: 49835 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 151517 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: reading "liballoc-ce7b9706e1719f27.rlib" => Duration { secs: 0, nanos: 22302 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: reading "librand-6bc49e032a89c77d.rlib" => Duration { secs: 0, nanos: 52261 }
+INFO:rustc_metadata::creader: register crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: reading "liblibc-95af4192ed69a1c8.rlib" => Duration { secs: 0, nanos: 28603 }
+INFO:rustc_metadata::creader: register crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: reading "libunwind-2beb731af7a6faec.rlib" => Duration { secs: 0, nanos: 41470 }
+INFO:rustc_metadata::creader: register crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: reading "libcompiler_builtins-0bf24067248742a8.rlib" => Duration { secs: 0, nanos: 86395 }
+INFO:rustc_metadata::creader: register crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 158290 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: reading "libpanic_unwind-9d79f761aa668a33.rlib" => Duration { secs: 0, nanos: 21366 }
+INFO:rustc_metadata::creader: register crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: alloc_jemalloc required by rlib and is an allocator
+INFO:rustc_metadata::creader: injecting a dep from 5 to 10
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_system as alloc_system`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: reading "liballoc_system-5636d8d1255715e9.rlib" => Duration { secs: 0, nanos: 55298 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc_system as alloc_system`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: injecting a dep from 5 to 12
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: panic runtime not found -- loading panic_unwind
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: resolved crates:
+INFO:rustc_metadata::creader:   name: panic_unwind
+INFO:rustc_metadata::creader:   cnum: 11
+INFO:rustc_metadata::creader:   hash: a65bb06f715477e1
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::creader:   name: unwind
+INFO:rustc_metadata::creader:   cnum: 8
+INFO:rustc_metadata::creader:   hash: 532ad27b58d6adb8
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::creader:   name: alloc
+INFO:rustc_metadata::creader:   cnum: 5
+INFO:rustc_metadata::creader:   hash: 3a892de708b1693e
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::creader:   name: core
+INFO:rustc_metadata::creader:   cnum: 2
+INFO:rustc_metadata::creader:   hash: 637fdf7b43bd3b10
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::creader:   name: alloc_jemalloc
+INFO:rustc_metadata::creader:   cnum: 10
+INFO:rustc_metadata::creader:   hash: 30d510c4c10a9512
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::creader:   name: libc
+INFO:rustc_metadata::creader:   cnum: 7
+INFO:rustc_metadata::creader:   hash: 3ba0ee72bfbb113a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::creader:   name: std_unicode
+INFO:rustc_metadata::creader:   cnum: 4
+INFO:rustc_metadata::creader:   hash: 989ed0b21ab064f9
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::creader:   name: std
+INFO:rustc_metadata::creader:   cnum: 1
+INFO:rustc_metadata::creader:   hash: b001f1b853496075
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:   dylib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::creader:   name: alloc_system
+INFO:rustc_metadata::creader:   cnum: 12
+INFO:rustc_metadata::creader:   hash: 4dcd7e0125244df8
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::creader:   name: compiler_builtins
+INFO:rustc_metadata::creader:   cnum: 9
+INFO:rustc_metadata::creader:   hash: f68cc2bdbdfd7776
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::creader:   name: rand
+INFO:rustc_metadata::creader:   cnum: 6
+INFO:rustc_metadata::creader:   hash: 7073c427bb91bcdb
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::creader:   name: collections
+INFO:rustc_metadata::creader:   cnum: 3
+INFO:rustc_metadata::creader:   hash: 46be044293f01c2a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+
+running 1 test
+INFO:rustdoc::test: final test program: extern crate foo;
+fn main() {
+foo::bar();
+println!("ok");
+}
+INFO:rustc_metadata::creader: resolving crate `extern crate std as std`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::locator: reading "libstd-9a66b6a343d52844.rlib" => Duration { secs: 0, nanos: 88910 }
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 38375 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::creader: register crate `extern crate std as std`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::locator: reading "libcore-cd0ca85e71f914ca.rlib" => Duration { secs: 0, nanos: 47830 }
+INFO:rustc_metadata::creader: register crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc_metadata::locator: reading "libcollections-a2a467c3ca3b6479.rlib" => Duration { secs: 0, nanos: 58439 }
+INFO:rustc_metadata::creader: register crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::locator: reading "libstd_unicode-e54225ff8f33e08f.rlib" => Duration { secs: 0, nanos: 26521 }
+INFO:rustc_metadata::creader: register crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_system-5636d8d1255715e9.rlib
+INFO:rustc_metadata::locator: reading "liballoc_system-5636d8d1255715e9.rlib" => Duration { secs: 0, nanos: 25076 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 147884 }
+INFO:rustc_metadata::locator: Rejecting via crate name
+INFO:rustc_metadata::locator: metadata mismatch
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::locator: reading "liballoc-ce7b9706e1719f27.rlib" => Duration { secs: 0, nanos: 20963 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::locator: reading "librand-6bc49e032a89c77d.rlib" => Duration { secs: 0, nanos: 49712 }
+INFO:rustc_metadata::creader: register crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::locator: reading "liblibc-95af4192ed69a1c8.rlib" => Duration { secs: 0, nanos: 24199 }
+INFO:rustc_metadata::creader: register crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::locator: reading "libunwind-2beb731af7a6faec.rlib" => Duration { secs: 0, nanos: 41006 }
+INFO:rustc_metadata::creader: register crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::locator: reading "libcompiler_builtins-0bf24067248742a8.rlib" => Duration { secs: 0, nanos: 84076 }
+INFO:rustc_metadata::creader: register crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::locator: reading "liballoc_jemalloc-4b74d6f2808677d3.rlib" => Duration { secs: 0, nanos: 156099 }
+INFO:rustc_metadata::creader: register crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: lib candidate: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::locator: reading "libpanic_unwind-9d79f761aa668a33.rlib" => Duration { secs: 0, nanos: 21004 }
+INFO:rustc_metadata::creader: register crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate foo as foo`
+INFO:rustc_metadata::creader: falling back to a load
+INFO:rustc_metadata::locator: rlib reading metadata from: /home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib
+INFO:rustc_metadata::locator: reading "libfoo-8fc72f475fb3cb52.rlib" => Duration { secs: 0, nanos: 53562 }
+INFO:rustc_metadata::creader: register crate `extern crate foo as foo`
+INFO:rustc_metadata::creader: resolving crate `extern crate std as std`
+INFO:rustc_metadata::creader: resolving crate `extern crate core as core`
+INFO:rustc_metadata::creader: resolving crate `extern crate collections as collections`
+INFO:rustc_metadata::creader: resolving crate `extern crate std_unicode as std_unicode`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc as alloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate rand as rand`
+INFO:rustc_metadata::creader: resolving crate `extern crate libc as libc`
+INFO:rustc_metadata::creader: resolving crate `extern crate unwind as unwind`
+INFO:rustc_metadata::creader: resolving crate `extern crate compiler_builtins as compiler_builtins`
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: alloc_jemalloc required by rlib and is an allocator
+INFO:rustc_metadata::creader: injecting a dep from 5 to 10
+INFO:rustc_metadata::creader: resolving crate `extern crate alloc_jemalloc as alloc_jemalloc`
+INFO:rustc_metadata::creader: injecting a dep from 5 to 10
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: panic runtime not found -- loading panic_unwind
+INFO:rustc_metadata::creader: resolving crate `extern crate panic_unwind as panic_unwind`
+INFO:rustc_metadata::creader: injecting a dep from 1 to 11
+INFO:rustc_metadata::creader: resolved crates:
+INFO:rustc_metadata::creader:   name: panic_unwind
+INFO:rustc_metadata::creader:   cnum: 11
+INFO:rustc_metadata::creader:   hash: a65bb06f715477e1
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-9d79f761aa668a33.rlib
+INFO:rustc_metadata::creader:   name: unwind
+INFO:rustc_metadata::creader:   cnum: 8
+INFO:rustc_metadata::creader:   hash: 532ad27b58d6adb8
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-2beb731af7a6faec.rlib
+INFO:rustc_metadata::creader:   name: alloc
+INFO:rustc_metadata::creader:   cnum: 5
+INFO:rustc_metadata::creader:   hash: 3a892de708b1693e
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ce7b9706e1719f27.rlib
+INFO:rustc_metadata::creader:   name: core
+INFO:rustc_metadata::creader:   cnum: 2
+INFO:rustc_metadata::creader:   hash: 637fdf7b43bd3b10
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-cd0ca85e71f914ca.rlib
+INFO:rustc_metadata::creader:   name: alloc_jemalloc
+INFO:rustc_metadata::creader:   cnum: 10
+INFO:rustc_metadata::creader:   hash: 30d510c4c10a9512
+INFO:rustc_metadata::creader:   reqd: Implicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc_jemalloc-4b74d6f2808677d3.rlib
+INFO:rustc_metadata::creader:   name: libc
+INFO:rustc_metadata::creader:   cnum: 7
+INFO:rustc_metadata::creader:   hash: 3ba0ee72bfbb113a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-95af4192ed69a1c8.rlib
+INFO:rustc_metadata::creader:   name: std_unicode
+INFO:rustc_metadata::creader:   cnum: 4
+INFO:rustc_metadata::creader:   hash: 989ed0b21ab064f9
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_unicode-e54225ff8f33e08f.rlib
+INFO:rustc_metadata::creader:   name: std
+INFO:rustc_metadata::creader:   cnum: 1
+INFO:rustc_metadata::creader:   hash: b001f1b853496075
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:   dylib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.so
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-9a66b6a343d52844.rlib
+INFO:rustc_metadata::creader:   name: foo
+INFO:rustc_metadata::creader:   cnum: 12
+INFO:rustc_metadata::creader:   hash: 29c2c998aa4db500
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib
+INFO:rustc_metadata::creader:   name: compiler_builtins
+INFO:rustc_metadata::creader:   cnum: 9
+INFO:rustc_metadata::creader:   hash: f68cc2bdbdfd7776
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib
+INFO:rustc_metadata::creader:   name: rand
+INFO:rustc_metadata::creader:   cnum: 6
+INFO:rustc_metadata::creader:   hash: 7073c427bb91bcdb
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librand-6bc49e032a89c77d.rlib
+INFO:rustc_metadata::creader:   name: collections
+INFO:rustc_metadata::creader:   cnum: 3
+INFO:rustc_metadata::creader:   hash: 46be044293f01c2a
+INFO:rustc_metadata::creader:   reqd: Explicit
+INFO:rustc_metadata::creader:    rlib: /home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcollections-a2a467c3ca3b6479.rlib
+INFO:rustc::middle::region: temporary_scope2(NodeId(37)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(37)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(9)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(9)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(8)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(8)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(11)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(11)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(10)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(10)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(31)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(31)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(12)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(12)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(25)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(25)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(24)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(24)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(30)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(30)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(29)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(29)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(26)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(26)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(28)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(28)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(23)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(23)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(22)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(22)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(21)) - was_shrunk=false
+INFO:rustc::middle::region: temporary_scope2(NodeId(21)) - was_shrunk=false
+INFO:rustc::middle::dependency_format: adding dylib: std
+INFO:rustc::middle::dependency_format: adding RequireStatic: core
+INFO:rustc::middle::dependency_format: adding RequireStatic: collections
+INFO:rustc::middle::dependency_format: adding RequireStatic: std_unicode
+INFO:rustc::middle::dependency_format: adding RequireStatic: alloc
+INFO:rustc::middle::dependency_format: adding RequireStatic: rand
+INFO:rustc::middle::dependency_format: adding RequireStatic: libc
+INFO:rustc::middle::dependency_format: adding RequireStatic: unwind
+INFO:rustc::middle::dependency_format: adding RequireStatic: compiler_builtins
+INFO:rustc::middle::dependency_format: adding RequireStatic: alloc_jemalloc
+INFO:rustc::middle::dependency_format: adding RequireStatic: panic_unwind
+INFO:rustc::middle::dependency_format: adding staticlib: foo
+INFO:rustc_trans::back::link: LinkMeta { crate_name: rust_out(90), crate_hash: Svh { hash: 4850778919732057270 } }
+INFO:rustc_trans::base: trans_instance(std::fmt::Arguments::new_v1)
+INFO:rustc_trans::base: trans_instance(main)
+INFO:rustc_trans::back::link: preparing CrateTypeExecutable from ["/tmp/rustdoctest.8jr6FDW6JLtr/rust_out.0.o"] to "/tmp/rustdoctest.8jr6FDW6JLtr/rust_out"
+INFO:rustc_metadata::cstore: topological ordering: [CrateNum(2), CrateNum(7), CrateNum(10), CrateNum(5), CrateNum(8), CrateNum(11), CrateNum(4), CrateNum(3), CrateNum(6), CrateNum(9), CrateNum(1), CrateNum(12)]
+INFO:rustc_metadata::cstore: topological ordering: [CrateNum(2), CrateNum(7), CrateNum(10), CrateNum(5), CrateNum(8), CrateNum(11), CrateNum(4), CrateNum(3), CrateNum(6), CrateNum(9), CrateNum(1), CrateNum(12)]
+INFO:rustc_trans::back::link: "cc" "-Wl,--as-needed" "-Wl,-z,noexecstack" "-m64" "-L" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "/tmp/rustdoctest.8jr6FDW6JLtr/rust_out.0.o" "-o" "/tmp/rustdoctest.8jr6FDW6JLtr/rust_out" "-Wl,--gc-sections" "-pie" "-nodefaultlibs" "-L" "/home/eispin/workspace/namespacing/target/debug/deps" "-L" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-Wl,-Bstatic" "-Wl,-Bdynamic" "/home/eispin/workspace/namespacing/target/debug/deps/libfoo-8fc72f475fb3cb52.rlib" "-L" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-l" "std-9a66b6a343d52844" "/home/eispin/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-0bf24067248742a8.rlib" "-l" "dl" "-l" "rt" "-l" "pthread" "-l" "gcc_s" "-l" "pthread" "-l" "c" "-l" "m" "-l" "rt" "-l" "util"
